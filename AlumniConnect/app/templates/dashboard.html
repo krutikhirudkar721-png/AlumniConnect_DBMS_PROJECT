@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard | AlumniConnect{% endblock %}
+
+{% block content %}
+
+<h1>Dashboard</h1>
+<p class="muted">Live database overview.</p>
+
+<div class="cards">
+
+    <div class="card">
+        <span>Total Alumni</span>
+        <strong>{{ stats.alumni }}</strong>
+    </div>
+
+    <div class="card">
+        <span>Departments</span>
+        <strong>{{ stats.departments }}</strong>
+    </div>
+
+    <div class="card">
+        <span>Companies</span>
+        <strong>{{ stats.companies }}</strong>
+    </div>
+
+    <div class="card">
+        <span>Skills</span>
+        <strong>{{ stats.skills }}</strong>
+    </div>
+
+    <div class="card">
+        <span>Mentors Available</span>
+        <strong>{{ stats.mentors }}</strong>
+    </div>
+
+</div>
+
+<div class="grid2">
+
+    <section class="panel">
+        <h2>Alumni by Department</h2>
+
+        <table>
+            <tr>
+                <th>Department</th>
+                <th>Total</th>
+            </tr>
+
+            {% for r in dept %}
+            <tr>
+                <td>{{ r.department_name }}</td>
+                <td>{{ r.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </section>
+
+    <section class="panel">
+        <h2>Alumni by Batch</h2>
+
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Total</th>
+            </tr>
+
+            {% for r in batch %}
+            <tr>
+                <td>{{ r.graduation_year }}</td>
+                <td>{{ r.total }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </section>
+
+</div>
+
+{% endblock %}
