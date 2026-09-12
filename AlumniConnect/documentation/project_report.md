@@ -21,6 +21,7 @@ Passwords are hashed with Werkzeug, SQL uses parameters, admin routes use server
 ## DBMS Concepts
 PK, FK, UNIQUE, NOT NULL, CHECK, defaults, 1:N, M:N, joins, aggregates, GROUP BY, HAVING, subqueries, EXISTS, views, indexes and transactions.
 
+
 ## Limitations
 Student accounts, password reset, email verification and advanced exports are outside the baseline scope.
 
