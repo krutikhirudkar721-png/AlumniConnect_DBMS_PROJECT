@@ -6,6 +6,7 @@ It is a relational DBMS supporting keys, constraints, joins, aggregation, views,
 ### Why separate skills?
 Skills are many-to-many: one alumnus has many skills and one skill belongs to many alumni. The junction table implements this relationship without comma-separated data.
 
+
 ### Why separate career history?
 An alumnus can have multiple jobs, so a separate table preserves career progression and avoids repeating attributes.
 
