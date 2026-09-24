@@ -3,7 +3,6 @@ from flask import Blueprint,render_template,request,redirect,url_for,session,fla
 from werkzeug.security import check_password_hash
 from app.database.connection import fetch_one
 
-
 auth_bp=Blueprint('auth',__name__)
 def login_required(view):
     @wraps(view)
