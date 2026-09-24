@@ -1,5 +1,6 @@
 USE alumniconnect;
 -- Basic filters
+
 SELECT * FROM alumni WHERE graduation_year BETWEEN 2020 AND 2024;
 SELECT a.alumni_id,CONCAT(a.first_name,' ',a.last_name) name,d.department_name FROM alumni a JOIN departments d ON a.department_id=d.department_id WHERE d.department_name='Computer Science';
 SELECT DISTINCT a.alumni_id,CONCAT(a.first_name,' ',a.last_name) name,co.industry FROM alumni a JOIN career_history ch ON a.alumni_id=ch.alumni_id JOIN companies co ON ch.company_id=co.company_id WHERE co.industry='IT' AND ch.is_current=1;
