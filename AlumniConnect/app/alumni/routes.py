@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from app.auth.routes import login_required, role_required
 from app.database.connection import fetch_all, fetch_one, execute, get_db
 
-
 alumni_bp = Blueprint('alumni', __name__, url_prefix='/alumni')
 
 @alumni_bp.route('/dashboard')
