@@ -17,7 +17,6 @@ def dashboard():
             'mentors': 'SELECT COUNT(*) n FROM mentorship WHERE is_available=1'
         }.items()
     }
-
     dept = fetch_all(
         'SELECT d.department_name, COUNT(a.alumni_id) total '
         'FROM departments d '
