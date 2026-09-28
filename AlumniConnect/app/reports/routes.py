@@ -1,3 +1,4 @@
+
 from flask import Blueprint,render_template
 from app.auth.routes import login_required,role_required
 from app.database.connection import fetch_all
