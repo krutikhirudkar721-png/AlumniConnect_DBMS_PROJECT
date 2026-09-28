@@ -1,3 +1,4 @@
+
 import mysql.connector
 from flask import current_app
 def get_db():
